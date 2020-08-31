@@ -1,0 +1,2 @@
+cat "mpl.io" "/sdcard/download/add.txt" >mpl.txt
+rm mpl.io && mv mpl.txt mpl.io
