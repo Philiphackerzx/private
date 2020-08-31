@@ -31,6 +31,6 @@ printf "\n\n"
 printf "${y}$result"
 printf "\n\n\n${n}"
 read pause
-sh mpl
+sh pop
 exit
 
