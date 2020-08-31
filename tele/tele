@@ -1,0 +1,32 @@
+
+
+
+
+
+
+cd "/sdcard/Telegram/Telegram Documents/"
+mkdir apk
+mkdir jpg
+mkdir gif
+mkdir mp4
+mkdir zip
+mkdir txt
+mkdir pdf
+mkdir mp3
+cp *.apk apk/
+cp *.jpg jpg/
+cp *.png jpg/
+cp *.gif gif/
+cp *.mp4 mp4/
+cp *.avi mp4/
+cp *.3gp mp4/
+cp *.zip zip/
+cp *.rar zip/
+cp *.7z zip/
+cp *.txt txt/
+cp *.pdf pdf/
+cp *.mp3 mp3/
+cp *.wav mp3/
+echo ""
+echo All done ✓ 
+echi ""
