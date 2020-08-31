@@ -1,0 +1,36 @@
+
+w='\033[1;37m'
+y='\033[1;33m'
+r='\033[1;31m'
+l='\033[1;32m'
+n='\033[0m'
+
+clear
+
+printf "${w} \n\n\n       www.philiphacker.in \n\n\n\n"
+printf "${y}Enter counts  : ${w}"
+read count
+printf "${l}Enter letters : ${w}"
+read letters
+
+green=`echo $letters | cut -c1`
+red1=`echo $letters | cut -c2`
+red2=`echo $letters | cut -c3`
+
+awk -F ' ' '{for(i=1;i<=NF;i++){ if(length($i)=='$count') print $i }}' mpl.io > file0.txt
+grep -o '\b'$green'\w*' file0.txt >file1.txt
+grep -wo '[[:alnum:]]*'$red1'[[:alnum:]]*' file1.txt >file2.txt
+grep -wo '[[:alnum:]]*'$red2'[[:alnum:]]*' file1.txt >file3.txt
+
+cat file2.txt file3.txt >file4.txt
+
+grep -vf file4.txt file1.txt > result.txt
+result=`cat result.txt`
+rm *.txt
+printf "\n\n"
+printf "${y}$result"
+printf "\n\n\n${n}"
+read pause
+sh mpl
+exit
+
